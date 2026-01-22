@@ -476,6 +476,58 @@
                             I'm based in Asia, so my availability is US mornings / EU afternoons. Weekends are available. Calendly will show times in your local timezone.
                         </div>
                     </div>
+
+                    <!-- FAQ Item 9 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(8)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">Why Claude Code instead of no-code tools like Lovable?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 8 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 8" class="px-6 pb-4 text-gray-600">
+                            No-code tools are fast for templates, but you hit walls quickly. Claude Code teaches you to build with real programming tools—the same ones professional developers use. The skills transfer to anything: web apps, data analysis, automation, APIs. You're not locked into one platform's limitations.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 10 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(9)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">Why not just use Claude in the browser?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 9 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 9" class="px-6 pb-4 text-gray-600">
+                            The browser version can write code snippets, but it can't run them, test them, or iterate on a real project. Claude Code is agentic—it reads and writes files on your machine, runs your code, sees errors, and fixes them automatically. That loop is what makes it powerful.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 11 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(10)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">What about Claude Cowork?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 10 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 10" class="px-6 pb-4 text-gray-600">
+                            Cowork is great for file management and document tasks—organizing folders, processing receipts, drafting from notes. But it doesn't build software. If you want to create tools, automate workflows, or build applications, you need Claude Code. This course teaches you the real thing.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 12 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(11)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">Why do I need to install VS Code?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 11 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 11" class="px-6 pb-4 text-gray-600">
+                            VS Code is just Word for code—it's where you organize and view your projects. It's also the foundation that tools like Cursor are built on (Cursor is literally a fork of VS Code). Learning your way around it, even superficially, means you'll understand what your technical team is working in. And when you're ready to explore other AI coding tools, the interface will already be familiar.
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Jargon Glossary -->
