@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intentionalAI Academy | Get Up to Speed with AI Coding Tools</title>
+    <meta name="description" content="Your team is building with AI. In one focused hour, get set up with Claude Code and learn to actually use it. Premium 1:1 setup sessions for executives.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0f172a',
+                        'navy-light': '#1e293b',
+                        gold: '#b8860b',
+                        'gold-light': '#d4a017',
+                        cream: '#faf9f7',
+                        'warm-gray': '#f5f4f2',
+                        'sky': '#6DAAD6',
+                        'beige': '#F4EFDB'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+                        brand: ['Libre Baskerville', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-cream text-navy font-sans antialiased">
+    <div id="app">
+        <!-- ========== HEADER ========== -->
+        <header class="bg-navy py-4">
+            <div class="max-w-6xl mx-auto px-6 flex items-center">
+                <a href="#" class="flex items-center gap-3">
+                    <img src="images/logo.png" alt="intentionalAI" class="w-10 h-10">
+                    <span class="text-cream font-brand font-bold text-lg">intentionalAI</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- ========== HERO SECTION ========== -->
+        <section class="min-h-[85vh] flex items-center bg-navy text-cream">
+            <div class="max-w-6xl mx-auto px-6 py-20 lg:py-32">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+                            Your team is building with AI. You're not.
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                            In one focused hour, I'll get you set up with Claude Code and show you how to actually use it. No fluff, no theory—just the skills to keep up.
+                        </p>
+                        <p class="text-gold font-medium mb-8">
+                            No coding background required. Designed for business leaders, not technologists.
+                        </p>
+                        <a href="#pricing" class="inline-block bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 text-lg transition-colors">
+                            See Pricing
+                        </a>
+                    </div>
+                    <div class="hidden lg:flex justify-center">
+                        <img src="images/jason.jpg" alt="Jason" class="w-80 h-80 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PROBLEM SECTION ========== -->
+        <section class="py-20 lg:py-28 bg-warm-gray">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <p class="text-xl md:text-2xl leading-relaxed text-navy-light">
+                    Your colleagues and direct reports are shipping features with AI tools you've never touched. You're nodding along in meetings, hoping no one asks for details. That ends today.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== WHO THIS IS FOR SECTION ========== -->
+        <section class="py-20 lg:py-28 bg-cream">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- This IS for you -->
+                    <div>
+                        <h3 class="font-serif text-2xl font-semibold mb-6 text-navy">This is for you if:</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg">You see your peers or colleagues building with AI and you feel behind</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg">You've been meaning to try Claude Code but haven't started</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg">You want to build real tools, not just chat with a bot</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg">You're willing to invest one hour to get unstuck</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- This is NOT for you -->
+                    <div>
+                        <h3 class="font-serif text-2xl font-semibold mb-6 text-navy">This is NOT for you if:</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg">You want someone to build something for you (I teach, I don't do freelance dev)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg">You're looking for prompt engineering tips (this is about building software)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-lg">You're not willing to install VS Code and sign up for Claude Pro</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PRICING SECTION ========== -->
+        <section id="pricing" class="py-20 lg:py-28 bg-cream">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-center mb-4">
+                    Choose Your Level
+                </h2>
+                <p class="text-center text-gray-600 mb-4 max-w-2xl mx-auto">
+                    Every session is live, 1:1, and focused on getting you productive with real tools.
+                </p>
+                <p class="text-center text-gray-500 mb-16">
+                    Questions before booking? <a href="mailto:jason@intentionalai.academy" class="text-gold hover:text-gold-light underline">Email me</a>
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Session -->
+                    <div class="bg-white border border-gray-200 p-8 flex flex-col">
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-sm tracking-wider text-gray-500 uppercase mb-2">Session</h3>
+                            <div class="flex items-baseline">
+                                <span class="font-serif text-4xl font-semibold">$150</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>1-hour live session tailored to your goals (bring data if you have it)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Recording of the session</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Written summary of what we built</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>48-hour DM support for follow-up questions</span>
+                            </li>
+                        </ul>
+                        <a href="https://calendly.com/intentional-ai/session" class="block text-center bg-navy hover:bg-navy-light text-cream font-semibold px-6 py-3 transition-colors">
+                            Book Session
+                        </a>
+                        <p class="text-center text-gray-500 text-sm mt-3">Satisfaction guaranteed</p>
+                    </div>
+
+                    <!-- Session + Follow-Up -->
+                    <div class="bg-white border-2 border-gold p-8 flex flex-col relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                            <span class="bg-gold text-navy text-xs font-semibold px-3 py-1 uppercase tracking-wider">Recommended</span>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-sm tracking-wider text-gray-500 uppercase mb-2">Session + Follow-Up</h3>
+                            <div class="flex items-baseline">
+                                <span class="font-serif text-4xl font-semibold">$350</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Everything in Session</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Second 1-hour session within 2 weeks</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>1-week DM support</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-600 mb-6 italic">The first session gets you started. The second is where it clicks—after you've tried things on your own, we work through what stuck and what didn't.</p>
+                        <a href="https://calendly.com/intentional-ai/session-followup" class="block text-center bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-3 transition-colors">
+                            Book Session + Follow-Up
+                        </a>
+                        <p class="text-center text-gray-500 text-sm mt-3">Satisfaction guaranteed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT SECTION ========== -->
+        <section class="py-20 lg:py-28 bg-navy text-cream">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12 items-center">
+                    <div class="md:col-span-1 flex justify-center">
+                        <div class="w-48 h-48 overflow-hidden">
+                            <img src="images/jason.jpg" alt="Jason" class="w-full h-full object-cover" style="transform: scale(2.0); transform-origin: 60% 15%;">
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6">
+                            About Jason
+                        </h2>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                            By day, I'm an integration engineer supporting clients like Disney, Netflix, and Warner Bros. I wrote code for years before AI could help, and I've been integrating it into my work ever since. The pace of advancement still astonishes me.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            But "prompt and pray" doesn't work. Using these tools well takes skill—and I can get you started on the right foot.
+                        </p>
+                        <p class="text-gold italic">
+                            2026 clients are founding clients. You get the best of both worlds: real experience, and the white-glove attention that comes with building something new.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SHOWCASE SECTION ========== -->
+        <section class="py-20 lg:py-28 bg-cream">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-center mb-6">
+                    What Intentional AI Looks Like
+                </h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    I built Fennec Search as a proof of concept—multimodal video search combining face recognition, dialog search, and image analysis across an hour of TV content. Now I'm using Claude Code to scale it to petabytes. That's what happens when you start with professional-grade tools: your prototype isn't a throwaway demo. It's the foundation of something real.
+                </p>
+                <div class="mb-8">
+                    <img src="images/fennec-screenshot.png" alt="Fennec Search interface" class="w-full border border-gray-200 shadow-lg">
+                </div>
+                <div class="text-center space-y-3">
+                    <p>
+                        <a href="https://dev.to/jason_peterson_607e54abf5/from-prototype-to-production-building-a-multimodal-video-search-engine-o1g" class="text-gold hover:text-gold-light font-medium underline" target="_blank" rel="noopener">
+                            Read: From Prototype to Production: Building a Multimodal Video Search Engine
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://dev.to/jason_peterson_607e54abf5" class="text-navy-light hover:text-navy underline" target="_blank" rel="noopener">
+                            More projects and writing on Dev.to
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== HOW IT WORKS SECTION ========== -->
+        <section class="py-20 lg:py-28 bg-warm-gray">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-center mb-8">
+                    How It Works
+                </h2>
+                <div class="flex justify-center mb-12">
+                    <img src="images/workflow.png" alt="Pay, Share Your Idea, Build" class="max-w-md w-full" style="mix-blend-mode: multiply;">
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-gold text-navy font-serif text-xl font-semibold flex items-center justify-center mx-auto mb-6">
+                            1
+                        </div>
+                        <h3 class="font-semibold text-lg mb-3">Book and Pay</h3>
+                        <p class="text-gray-600">
+                            Choose your tier and schedule a time that works. Payment is handled securely through Calendly.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-gold text-navy font-serif text-xl font-semibold flex items-center justify-center mx-auto mb-6">
+                            2
+                        </div>
+                        <h3 class="font-semibold text-lg mb-3">Share Your Idea</h3>
+                        <p class="text-gray-600">
+                            Have data you want to work with? Send it ahead. Just have an idea? That works too. I'll tailor the session to wherever you're starting from.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-gold text-navy font-serif text-xl font-semibold flex items-center justify-center mx-auto mb-6">
+                            3
+                        </div>
+                        <h3 class="font-semibold text-lg mb-3">Build Together</h3>
+                        <p class="text-gray-600">
+                            In one focused hour, you'll go from zero to building real things with AI. You leave with working skills, not slides.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ SECTION ========== -->
+        <section class="py-20 lg:py-28 bg-cream">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold text-center mb-12">
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(0)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">Do I need any technical or coding background?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 0 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 0" class="px-6 pb-4 text-gray-600">
+                            No. I designed this for business leaders, not developers. You'll learn some useful terminology along the way, but no prior experience required.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(1)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">What will I actually be able to DO after our session?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 1 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 1" class="px-6 pb-4 text-gray-600">
+                            You'll have Claude Code installed and working. You'll understand how to architect a project using a CLAUDE.md file. And you'll have built something real—either with your own data or a sample project relevant to your work.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(2)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">What's your refund policy?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 2 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 2" class="px-6 pb-4 text-gray-600">
+                            If you're not satisfied, I'll either redo the session or refund you. I'm building this practice and I need you to succeed.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(3)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">Do I need to prepare anything?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 3 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 3" class="px-6 pb-4 text-gray-600">
+                            Yes. Before we meet: install VS Code, sign up for Claude Pro ($20/mo), and install the Claude Code extension. I'll send instructions. If you have a data file you'd like to work with (spreadsheet, CSV, etc.), have it ready—but it's optional.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(4)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">What if I don't have data to work with?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 4 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 4" class="px-6 pb-4 text-gray-600">
+                            No problem. I'll bring sample datasets relevant to your domain. Or we can explore what's possible and identify what you'd want to build first.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(5)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">What makes this different from YouTube tutorials?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 5 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 5" class="px-6 pb-4 text-gray-600">
+                            Two things: it's 1:1 with your specific situation, and I teach you to build production-quality code—not throwaway demos. You'll learn the architecture patterns that make AI-generated code maintainable.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(6)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">Are you new to this?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 6 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 6" class="px-6 pb-4 text-gray-600">
+                            I've been building with Claude Code professionally for over a year, supporting enterprise clients. What's new is offering this as a standalone service. Early clients are founding clients—you get disproportionate attention because I'm invested in making this work.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="border border-gray-200 bg-white">
+                        <button @click="toggleFaq(7)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                            <span class="font-semibold text-navy">What times are available?</span>
+                            <svg class="w-5 h-5 text-gold transition-transform duration-200" :class="{ 'rotate-180': openFaq === 7 }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div v-show="openFaq === 7" class="px-6 pb-4 text-gray-600">
+                            I'm based in Asia, so my availability is US mornings / EU afternoons. Weekends are available. Calendly will show times in your local timezone.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jargon Glossary -->
+                <div class="mt-16 pt-12 border-t border-gray-200">
+                    <h3 class="font-serif text-2xl font-semibold text-center mb-8">Terms Worth Knowing</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white border border-gray-200 p-5">
+                            <h4 class="font-semibold text-navy mb-2">IDE (Integrated Development Environment)</h4>
+                            <p class="text-gray-600 text-sm">A word processor for code. VS Code is an IDE—it's where you'll write and organize your projects, and likely what your team is already using. If you can use Word, you can use VS Code.</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-5">
+                            <h4 class="font-semibold text-navy mb-2">CLAUDE.md</h4>
+                            <p class="text-gray-600 text-sm">A file you write that tells Claude Code how to build your project. Think of it as a creative brief for an AI developer. This is the core of "intentional" AI development.</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-5">
+                            <h4 class="font-semibold text-navy mb-2">Design Patterns (MVC, MVP, MVVM)</h4>
+                            <p class="text-gray-600 text-sm">Standard ways to organize code—separating data, display, and logic. The specific pattern matters less than the principle: structure keeps things maintainable instead of one giant mess.</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-5">
+                            <h4 class="font-semibold text-navy mb-2">Separation of Concerns</h4>
+                            <p class="text-gray-600 text-sm">The principle behind design patterns. Each piece of code should do one thing. Makes debugging possible and lets your team actually work with what you build.</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-5">
+                            <h4 class="font-semibold text-navy mb-2">Unit Tests</h4>
+                            <p class="text-gray-600 text-sm">Small checks that verify your code works. Claude Code can write these for you. They catch bugs before they become problems.</p>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-5">
+                            <h4 class="font-semibold text-navy mb-2">Agent / Agentic AI</h4>
+                            <p class="text-gray-600 text-sm">AI that can use tools, make decisions, and take multiple steps to complete a task—not just answer questions. Claude Code can write code, run it, see if it works, fix what's broken, and repeat until it's right. That loop is what makes it powerful.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FINAL CTA SECTION ========== -->
+        <section class="py-20 lg:py-28 bg-cream">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6">
+                    Stop nodding along. Start building.
+                </h2>
+                <p class="text-gray-600 text-lg mb-8">
+                    Limited slots available each week.
+                </p>
+                <a href="#pricing" class="inline-block bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 text-lg transition-colors">
+                    Book Your Session
+                </a>
+            </div>
+        </section>
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="py-8 bg-navy text-gray-400 text-sm">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <p>&copy; 2026 intentionalAI Academy. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Vue 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    openFaq: null
+                }
+            },
+            methods: {
+                toggleFaq(index) {
+                    this.openFaq = this.openFaq === index ? null : index
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
