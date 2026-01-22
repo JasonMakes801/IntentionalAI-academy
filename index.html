@@ -46,6 +46,17 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Disable iOS Safari touch behaviors */
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+        /* Re-enable text selection where needed */
+        p, h1, h2, h3, h4, span, li {
+            -webkit-touch-callout: default;
+            -webkit-user-select: text;
+            user-select: text;
+        }
     </style>
 </head>
 <body class="bg-cream text-navy font-sans antialiased">
